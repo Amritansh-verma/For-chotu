@@ -6,17 +6,21 @@
     <title>Happy Birthday!</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Pacifico', cursive;
-            background-color: #f1f1f1;
+            background-color: #f7f3e9; /* Soft beige for luxurious feel */
+            color: #4a2c2a; /* Dark brown for text */
             text-align: center;
             padding: 50px;
             margin: 0;
+            transition: background-color 0.5s ease;
         }
 
         /* Heart Animation */
         .heart {
-            font-size: 50px;
+            font-size: 60px;
+            color: #e74c3c; /* Deep burgundy */
             animation: pulse 1s infinite;
         }
 
@@ -26,7 +30,36 @@
             100% { transform: scale(1); }
         }
 
-        /* Popup message */
+        /* Navigation Bar */
+        nav {
+            background-color: #2e1a47; /* Dark purple */
+            padding: 10px 0;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f4d03f; /* Gold for a premium look */
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c; /* Burgundy for hover effect */
+        }
+
+        /* Popup Message */
         .popup {
             position: fixed;
             top: 20%;
@@ -40,7 +73,7 @@
         }
 
         .popup p {
-            font-size: 18px;
+            font-size: 20px;
             color: #e74c3c;
         }
 
@@ -57,7 +90,7 @@
             background-color: #c0392b;
         }
 
-        /* Love quotes */
+        /* Love Quotes */
         .love-quotes {
             font-style: italic;
             font-size: 22px;
@@ -65,38 +98,25 @@
             margin-top: 30px;
         }
 
-        /* Smooth transition effect */
-        body {
-            transition: background-color 0.5s ease;
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #4a2c2a;
         }
 
-        body:hover {
-            background-color: #f2f2f2;
-        }
-
-        /* Navigation Bar */
-        nav {
-            margin-bottom: 50px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
+        footer a {
             color: #e74c3c;
-            font-size: 18px;
+            text-decoration: none;
         }
 
-        nav ul li a:hover {
-            color: #3498db;
+        footer a:hover {
+            color: #f4d03f; /* Gold color */
+        }
+
+        /* Audio Styles */
+        audio {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -104,10 +124,10 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -116,13 +136,13 @@
         ❤️
     </div>
 
-    <!-- Personalized Message Popup -->
+    <!-- Personalized Popup Message -->
     <div id="message-popup" class="popup">
         <p>Happy Birthday, You mean the world to me! 💖</p>
         <button onclick="closePopup()">Close</button>
     </div>
 
-    <!-- Love Quotes -->
+    <!-- Love Quotes Section -->
     <section class="love-quotes">
         <p>"You are my today and all of my tomorrows."</p>
         <p>"Every moment with you is like a dream come true."</p>
@@ -133,6 +153,11 @@
         <source src="love_song.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created with ❤️ for you. <a href="#">Go to top</a></p>
+    </footer>
 
     <script>
         window.onload = function() {
