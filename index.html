@@ -3,56 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meri Chotku</title>
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Pacifico', cursive;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 50px;
             margin: 0;
+        }
+
+        /* Heart Animation */
+        .heart {
+            font-size: 50px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Popup message */
+        .popup {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .popup p {
+            font-size: 18px;
+            color: #e74c3c;
+        }
+
+        .popup button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .popup button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Love quotes */
+        .love-quotes {
+            font-style: italic;
+            font-size: 22px;
+            color: #e74c3c;
+            margin-top: 30px;
+        }
+
+        /* Smooth transition effect */
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        body:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin-bottom: 50px;
+        }
+
+        nav ul {
+            list-style: none;
             padding: 0;
         }
-        header {
-            background-color: #2f4f4f;
-            color: white;
-            text-align: center;
-            padding: 20px;
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
         }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e74c3c;
             font-size: 18px;
         }
-        .button:hover {
-            background-color: #45a049;
+
+        nav ul li a:hover {
+            color: #3498db;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Welcome Page -->
-    <header>
-        <h1>Meri Chotku, Ek Baat Kehni Hai...</h1>
-    </header>
-    <div class="content">
-        <h2>Hame pata hai, meri galti thi</h2>
-        <p>Tumhe kabhi bhi hurt karna hamara iraada nahi tha. Tum hamari zindagi mein kitni khaas ho, yeh batane ke liye ye website banayi hai.</p>
-        <button class="button" onclick="window.location.href='feelings.html'">Aage Badho</button>
+    <!-- Heart Animation -->
+    <div class="heart">
+        ❤️
     </div>
 
+    <!-- Personalized Message Popup -->
+    <div id="message-popup" class="popup">
+        <p>Happy Birthday, You mean the world to me! 💖</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Love Quotes -->
+    <section class="love-quotes">
+        <p>"You are my today and all of my tomorrows."</p>
+        <p>"Every moment with you is like a dream come true."</p>
+    </section>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="love_song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("message-popup").style.display = "block";
+        };
+
+        function closePopup() {
+            document.getElementById("message-popup").style.display = "none";
+        }
+    </script>
 </body>
 </html>
