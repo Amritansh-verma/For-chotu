@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>I'm Sorry</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
         body {
             font-family: 'Pacifico', cursive;
-            background-color: #f7f3e9; /* Soft beige for luxurious feel */
-            color: #4a2c2a; /* Dark brown for text */
+            background-color: #f7f3e9; /* Soft beige */
+            color: #4a2c2a; /* Dark brown */
             text-align: center;
             padding: 50px;
             margin: 0;
-            transition: background-color 0.5s ease;
         }
 
-        /* Heart Animation */
         .heart {
-            font-size: 60px;
+            font-size: 80px;
             color: #e74c3c; /* Deep burgundy */
             animation: pulse 1s infinite;
         }
@@ -30,9 +27,8 @@
             100% { transform: scale(1); }
         }
 
-        /* Navigation Bar */
         nav {
-            background-color: #2e1a47; /* Dark purple */
+            background-color: #2e1a47;
             padding: 10px 0;
             border-radius: 10px;
             margin-bottom: 50px;
@@ -50,16 +46,26 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #f4d03f; /* Gold for a premium look */
+            color: #f4d03f; /* Gold */
             font-size: 18px;
             font-weight: bold;
         }
 
         nav ul li a:hover {
-            color: #e74c3c; /* Burgundy for hover effect */
+            color: #e74c3c; /* Burgundy */
         }
 
-        /* Popup Message */
+        .message {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-top: 30px;
+        }
+
+        .message p {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
         .popup {
             position: fixed;
             top: 20%;
@@ -70,11 +76,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: none;
-        }
-
-        .popup p {
-            font-size: 20px;
-            color: #e74c3c;
         }
 
         .popup button {
@@ -90,15 +91,6 @@
             background-color: #c0392b;
         }
 
-        /* Love Quotes */
-        .love-quotes {
-            font-style: italic;
-            font-size: 22px;
-            color: #e74c3c;
-            margin-top: 30px;
-        }
-
-        /* Footer */
         footer {
             margin-top: 50px;
             font-size: 14px;
@@ -111,21 +103,17 @@
         }
 
         footer a:hover {
-            color: #f4d03f; /* Gold color */
-        }
-
-        /* Audio Styles */
-        audio {
-            margin-top: 20px;
+            color: #f4d03f;
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="apology.html">Apology</a></li>
             <li><a href="messages.html">Messages</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -136,27 +124,22 @@
         ❤️
     </div>
 
-    <!-- Personalized Popup Message -->
+    <!-- Apology Message -->
+    <div class="message">
+        <p>I'm really sorry for everything that happened. I never meant to hurt you.</p>
+        <p>Can you please forgive me? I want to make things right and show you how much you mean to me.</p>
+        <p>I'm waiting for your forgiveness with all my heart.</p>
+    </div>
+
+    <!-- Popup for additional message -->
     <div id="message-popup" class="popup">
-        <p>Happy Birthday, You mean the world to me! 💖</p>
+        <p>I miss you and I’m sorry. 💖</p>
         <button onclick="closePopup()">Close</button>
     </div>
 
-    <!-- Love Quotes Section -->
-    <section class="love-quotes">
-        <p>"You are my today and all of my tomorrows."</p>
-        <p>"Every moment with you is like a dream come true."</p>
-    </section>
-
-    <!-- Background Music -->
-    <audio autoplay loop>
-        <source src="love_song.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
     <!-- Footer -->
     <footer>
-        <p>Created with ❤️ for you. <a href="#">Go to top</a></p>
+        <p>Created with love and regret. <a href="#">Go to top</a></p>
     </footer>
 
     <script>
