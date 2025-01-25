@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Sorry</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Pacifico', cursive;
-            background-color: #f7f3e9; /* Soft beige */
-            color: #4a2c2a; /* Dark brown */
-            text-align: center;
-            padding: 50px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffefdb; /* Light beige background */
             margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #c0392b; /* Burgundy color */
+            font-size: 60px;
+            margin-top: 30px;
+        }
+
+        .apology-content {
+            background-color: #fff;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .apology-message {
+            font-size: 22px;
+            color: #2c3e50;
+            line-height: 1.6;
+            font-weight: 500;
         }
 
         .heart {
-            font-size: 80px;
-            color: #e74c3c; /* Deep burgundy */
-            animation: pulse 1s infinite;
+            font-size: 100px;
+            color: #e74c3c; /* Heart color */
+            animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
@@ -27,74 +49,27 @@
             100% { transform: scale(1); }
         }
 
-        nav {
-            background-color: #2e1a47;
-            padding: 10px 0;
-            border-radius: 10px;
-            margin-bottom: 50px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #f4d03f; /* Gold */
+        .button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 25px;
             font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #e74c3c; /* Burgundy */
-        }
-
-        .message {
-            font-size: 24px;
-            color: #e74c3c;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
             margin-top: 30px;
         }
 
-        .message p {
-            font-size: 22px;
-            font-weight: 500;
-        }
-
-        .popup {
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-
-        .popup button {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .popup button:hover {
+        .button:hover {
             background-color: #c0392b;
         }
 
         footer {
             margin-top: 50px;
             font-size: 14px;
-            color: #4a2c2a;
+            color: #7f8c8d;
         }
 
         footer a {
@@ -103,53 +78,27 @@
         }
 
         footer a:hover {
-            color: #f4d03f;
+            color: #c0392b;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="apology.html">Apology</a></li>
-            <li><a href="messages.html">Messages</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Heart Animation -->
-    <div class="heart">
-        ❤️
+    <h1>I'm Sorry</h1>
+    
+    <div class="apology-content">
+        <div class="heart">❤️</div>
+        <div class="apology-message">
+            <p>Hey, I just want to say I'm deeply sorry for the hurt I caused. I never meant to upset you, and I feel bad for making you feel this way.</p>
+            <p>You mean a lot to me, and I hope you can find it in your heart to forgive me. I truly regret my actions and am here to make things right.</p>
+            <p>With all my heart, I’m asking for your forgiveness. I promise to do better and be there for you. Please give me a chance.</p>
+        </div>
+        <a href="#" class="button">Accept My Apology</a>
     </div>
 
-    <!-- Apology Message -->
-    <div class="message">
-        <p>I'm really sorry for everything that happened. I never meant to hurt you.</p>
-        <p>Can you please forgive me? I want to make things right and show you how much you mean to me.</p>
-        <p>I'm waiting for your forgiveness with all my heart.</p>
-    </div>
-
-    <!-- Popup for additional message -->
-    <div id="message-popup" class="popup">
-        <p>I miss you and I’m sorry. 💖</p>
-        <button onclick="closePopup()">Close</button>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        <p>Created with love and regret. <a href="#">Go to top</a></p>
+        <p>Made with love and regret. <a href="#">Go to Top</a></p>
     </footer>
 
-    <script>
-        window.onload = function() {
-            document.getElementById("message-popup").style.display = "block";
-        };
-
-        function closePopup() {
-            document.getElementById("message-popup").style.display = "none";
-        }
-    </script>
 </body>
 </html>
